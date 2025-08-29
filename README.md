@@ -32,7 +32,7 @@ Este proyecto busca **replicar y validar** los hallazgos del artículo mediante 
 | Descripción del proyecto                                                 | 28 ago – 2 sep | Todo el equipo | Documento markdown             |
 | Descarga y control de calidad de datos                                   | 5 – 20 sep     | Andrea         | Reporte QC (FastQC)            |
 | Alineamiento y cuantificación de lecturas                                | 21 – 30 sep    | Antonio        | Archivos, tabla de conteos     |
-| Análisis de expresión diferencial (DESeq2)                               | 1 – 15 oct     | Alejandra      | Script R, tablas de DEGs       |
+| Análisis de expresión diferencial (DESeq2)                               | 1 – 15 oct     | Alejandra      | Script, tablas de DEGs       |
 | Anotación funcional                                                      | 16 – 25 oct    | Alejandra      | Reporte en markdown            |
 | Integración de resultados y gráficas                                     | 26 oct – 5 nov | Antonio        | Figuras en repositorio         |
 | Redacción del reporte de resultados                                      | 6 – 15 nov     | Andrea         | Documento markdown             |
