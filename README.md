@@ -50,12 +50,12 @@ Este proyecto busca **replicar y validar** los hallazgos del artículo mediante 
 
 1. **Localización y descarga de datos** (ENA, proyectos PRJEB65286, PRJNA698672, PRJNA51801).
 2. **Control de calidad de lecturas FASTQ** (FastQC, Trim Galore).
-3. **Alineamiento** al genoma humano GRCh38 (STAR).
-4. **Generación de tabla de conteos** por gen.
+3. **Alineamiento**  (STAR).
+4. **Generación de tabla de conteos**
 5. **Análisis de expresión diferencial** (DESeq2)
 6. **Anotación funcional** 
 7. **Visualización de resultados**
-8. **Integración y discusión de resultados** frente al artículo original.
+8. **Integración y discusión de resultados** 
 
 ## Resultados esperados
 
