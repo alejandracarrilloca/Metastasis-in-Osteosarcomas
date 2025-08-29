@@ -1,51 +1,67 @@
 # Biological Activity of Biomarkers Associated With Metastasis in Osteosarcoma Cell Lines
+
 26/08/2025
-- Dulce Alejandra Carrillo Carlos carrillo@lcg.unam.mx
-- Addiel Antonio Platas Renteral addielpr@lcg.unam.mx
-- Andrea Villarruel García andreavg@lcg.unam.mx
 
+* Dulce Alejandra Carrillo Carlos [carrillo@lcg.unam.mx](mailto:carrillo@lcg.unam.mx)
+* Addiel Antonio Platas Renteral [addielpr@lcg.unam.mx](mailto:addielpr@lcg.unam.mx)
+* Andrea Villarruel García [andreavg@lcg.unam.mx](mailto:andreavg@lcg.unam.mx)
 
-This analysis replicates the following article:  https://doi.org/10.1002/cam4.70391
+This analysis replicates the following article: [Biological Activity of Biomarkers Associated With Metastasis in Osteosarcoma Cell Lines](https://doi.org/10.1002/cam4.70391).
 
-The data that support the findings of this
-study are openly available in ENA EMBL-­EBI (https://​www.​ebi.​ac.​uk/​ena/​brows​er/​home) with Project IDs PRJEB65286, PRJNA698672 and PRJNA51801. 
+The data that support the findings of this study are openly available in **ENA EMBL-­EBI** ([https://www.ebi.ac.uk/ena/browser/home](https://www.ebi.ac.uk/ena/browser/home)) with Project IDs: **PRJEB65286**, **PRJNA698672**, and **PRJNA51801**.
 
+---
 
 ## Planteamiento del problema
 
-[Describir la problemática que se presenta, la situación que motiva la realización del proyecto y que está causando posibles inconvenientes]
+El osteosarcoma es un cáncer altamente agresivo que afecta principalmente a adolescentes y adultos jóvenes. La principal causa de muerte en pacientes con este tipo de cáncer es la **metástasis pulmonar**, proceso cuya base molecular no está completamente caracterizada.
+
+Estudiar los perfiles de expresión génica asociados con la invasión y migración celular es crucial para:
+
+* Identificar **biomarcadores** que permitan pronósticos más precisos.
+* Comprender los mecanismos moleculares de la metástasis.
+
+Este proyecto busca **replicar y validar** los hallazgos del artículo mediante un pipeline bioinformático de análisis de RNA-seq y análisis de expresión diferencial.
+
+---
 
 ## Calendario de trabajo
 
-[Definir de manera general la actividades que se requerirán para el proyecto. Por ejemplo:]
+| Actividad                                                                | Fecha          | Responsable    | Entregable                     |
+| ------------------------------------------------------------------------ | -------------- | -------------- | ------------------------------ |
+| Descripción del proyecto                                                 | 26 ago – 2 sep | Todo el equipo | Documento markdown             |
+| Especificación de requisitos (datos, software, dependencias)             | 3 – 10 sep     | Andrea         | Documento markdown             |
+| Descarga y control de calidad de datos                                   | 11 – 20 sep    | Alejandra      | Reporte QC (FastQC)            |
+| Alineamiento y cuantificación de lecturas                                | 21 – 30 sep    | Antonio        | Archivos, tabla de conteos     |
+| Análisis de expresión diferencial (DESeq2)                               | 1 – 15 oct     | Alejandra      | Script R, tablas de DEGs       |
+| Anotación funcional (KEGG, GO, STRING)                                   | 16 – 25 oct    | Alejandra      | Reporte en markdown            |
+| Integración de resultados y gráficas                                     | 26 oct – 5 nov | Addiel         | Figuras en repositorio         |
+| Redacción del reporte de resultados                                      | 6 – 15 nov     | Andrea         | Documento markdown             |
+| Presentación del proyecto                                                | 20 – 30 nov    | Todo el equipo | Repositorio GitHub (release)   |
 
-| Actividad | Fecha   | Responsable  | Entregable |
-|----------|----------|----------|----------|
-| Descripción de proyecto    | 3-10 marzo  | Juan López, Daniela Estrada   | Documento markdown |
-| Especificación de requisitos    | septiembre   | Juan López   | Documento markdown   |
-| Análisis y diseño   | septiembre  |  Daniela Estrada   | Documento markdown |
-| Construcción   | octubre, noviembre  |  Daniela Estrada, Juan López   | Scripts |
-| Pruebas   | noviembre  |  Daniela Estrada, Juan López   | Documento markdown |
-| Reporte de resultados  | noviembre  |  Daniela Estrada, Juan López   | Documentos markdown |
-| Presentación del proyecto   | diciembre  |  Daniela Estrada, Juan López   | repositorio GitHub (release)|
-
-
+---
 
 ## Metodología
-[Descripción general de los pasos a realizar para el proyecto, por ejemplo:]
 
 **Preguntas de investigación**
 
+1. ¿Qué genes están diferencialmente expresados entre células osteoblásticas normales y líneas celulares de osteosarcoma metastásicas?
 
+**Pipeline propuesto**
 
-Paso 1: Localización de fuente de datos  
-Paso 2: Descarga de archivos de datos  
-Paso 3: Inspección de datos  
-Paso 4: Limpieza de datos
-Paso 5: Descripción de los datos  
-Paso 5: Análsis de datos depurados  
-Paso 6: Obtención de resultados  
-
-
+1. **Localización y descarga de datos** (ENA, proyectos PRJEB65286, PRJNA698672, PRJNA51801).
+2. **Control de calidad de lecturas FASTQ** (FastQC, Trim Galore).
+3. **Alineamiento** al genoma humano GRCh38 (STAR).
+4. **Generación de tabla de conteos** por gen.
+5. **Análisis de expresión diferencial** (DESeq2)
+6. **Anotación funcional** 
+7. **Visualización de resultados**
+8. **Integración y discusión de resultados** frente al artículo original.
 
 ## Resultados esperados
+
+* Identificación de genes diferencialmente expresados (DEGs) entre células normales y osteosarcoma metastásico.
+* Detección de biomarcadores relevantes en la metástasis. 
+* Reproducción de resultados clave reportados en el artículo, con figuras. 
+* Generación de un repositorio reproducible en GitHub. 
+
