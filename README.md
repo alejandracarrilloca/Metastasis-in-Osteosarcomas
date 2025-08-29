@@ -29,15 +29,14 @@ Este proyecto busca **replicar y validar** los hallazgos del artículo mediante 
 
 | Actividad                                                                | Fecha          | Responsable    | Entregable                     |
 | ------------------------------------------------------------------------ | -------------- | -------------- | ------------------------------ |
-| Descripción del proyecto                                                 | 26 ago – 2 sep | Todo el equipo | Documento markdown             |
-| Especificación de requisitos (datos, software, dependencias)             | 3 – 10 sep     | Andrea         | Documento markdown             |
-| Descarga y control de calidad de datos                                   | 11 – 20 sep    | Alejandra      | Reporte QC (FastQC)            |
+| Descripción del proyecto                                                 | 28 ago – 2 sep | Todo el equipo | Documento markdown             |
+| Descarga y control de calidad de datos                                   | 5 – 20 sep     | Andrea         | Reporte QC (FastQC)            |
 | Alineamiento y cuantificación de lecturas                                | 21 – 30 sep    | Antonio        | Archivos, tabla de conteos     |
 | Análisis de expresión diferencial (DESeq2)                               | 1 – 15 oct     | Alejandra      | Script R, tablas de DEGs       |
-| Anotación funcional (KEGG, GO, STRING)                                   | 16 – 25 oct    | Alejandra      | Reporte en markdown            |
-| Integración de resultados y gráficas                                     | 26 oct – 5 nov | Addiel         | Figuras en repositorio         |
+| Anotación funcional                                                      | 16 – 25 oct    | Alejandra      | Reporte en markdown            |
+| Integración de resultados y gráficas                                     | 26 oct – 5 nov | Antonio        | Figuras en repositorio         |
 | Redacción del reporte de resultados                                      | 6 – 15 nov     | Andrea         | Documento markdown             |
-| Presentación del proyecto                                                | 20 – 30 nov    | Todo el equipo | Repositorio GitHub (release)   |
+| Presentación del proyecto                                                | Diciembre      | Todo el equipo | Repositorio GitHub (release)   |
 
 ---
 
@@ -60,7 +59,7 @@ Este proyecto busca **replicar y validar** los hallazgos del artículo mediante 
 
 ## Resultados esperados
 
-* Identificación de genes diferencialmente expresados (DEGs) entre células normales y osteosarcoma metastásico.
+* Identificación de genes diferencialmente expresados entre células normales y osteosarcoma metastásico.
 * Detección de biomarcadores relevantes en la metástasis. 
 * Reproducción de resultados clave reportados en el artículo, con figuras. 
 * Generación de un repositorio reproducible en GitHub. 
