@@ -14,7 +14,9 @@ The data that support the findings of this study are openly available in **ENA E
 
 ## Planteamiento del problema
 
-El osteosarcoma es un cáncer altamente agresivo que afecta principalmente a adolescentes y adultos jóvenes. La principal causa de muerte en pacientes con este tipo de cáncer es la **metástasis pulmonar**, proceso cuya base molecular no está completamente caracterizada.
+El osteosarcoma es el  cáncer más común entre adolescentes y adultos jóvenes. Aunque el tratamiento convencional incluye cirujía y quimioterapia, la **metástasis pulmonar** continua siendo La principal causa de muerte en pacientes con este tipo de cáncer. 
+
+A nivel molecular, la metástasis implica una serie de cambios en la **expresión génica**, incluyendo vías relacionadas relacionadas con migración, adhesión y remodelación del microambiente tumoral. Sin embargo, los **biomarcadores moleculares** asociados a estos procesos no están completamente caracterizados, lo que limita el desarrollo de nuevas estategias terapéuticas.  
 
 Estudiar los perfiles de expresión génica asociados con la invasión y migración celular es crucial para:
 
