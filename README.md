@@ -1,68 +1,69 @@
 # Biological Activity of Biomarkers Associated With Metastasis in Osteosarcoma Cell Lines
 
-26/08/2025
+**08/26/2025**
 
-* Dulce Alejandra Carrillo Carlos [carrillo@lcg.unam.mx](mailto:carrillo@lcg.unam.mx)
-* Addiel Antonio Platas Renteral [addielpr@lcg.unam.mx](mailto:addielpr@lcg.unam.mx)
-* Andrea Villarruel García [andreavg@lcg.unam.mx](mailto:andreavg@lcg.unam.mx)
+- Dulce Alejandra Carrillo Carlos [carrillo@lcg.unam.mx](mailto:carrillo@lcg.unam.mx)  
+- Addiel Antonio Platas Renteral [addielpr@lcg.unam.mx](mailto:addielpr@lcg.unam.mx)  
+- Andrea Villarruel García [andreavg@lcg.unam.mx](mailto:andreavg@lcg.unam.mx)
 
 This analysis replicates the following article: [Biological Activity of Biomarkers Associated With Metastasis in Osteosarcoma Cell Lines](https://doi.org/10.1002/cam4.70391).
 
-The data that support the findings of this study are openly available in **ENA EMBL-­EBI** ([https://www.ebi.ac.uk/ena/browser/home](https://www.ebi.ac.uk/ena/browser/home)) with Project IDs: **PRJEB65286**, **PRJNA698672**, and **PRJNA51801**.
+The data supporting the findings of this study are openly available in **ENA EMBL-EBI** ([https://www.ebi.ac.uk/ena/browser/home](https://www.ebi.ac.uk/ena/browser/home)) under the Project IDs: **PRJEB65286**, **PRJNA698672**, and **PRJNA51801**.
 
 ---
 
-## Planteamiento del problema
+## Problem Statement
 
-El osteosarcoma es el  cáncer más común entre adolescentes y adultos jóvenes. Aunque el tratamiento convencional incluye cirujía y quimioterapia, la **metástasis pulmonar** continua siendo La principal causa de muerte en pacientes con este tipo de cáncer. 
+Osteosarcoma is the most common cancer among adolescents and young adults, and it represents the most frequent primary malignant bone tumor in this population. It mainly affects long bones during periods of rapid growth, such as the distal femur, proximal tibia, and humerus. Although conventional treatment includes combined surgery and chemotherapy—with significant improvements in survival for patients without disseminated disease—**pulmonary metastasis** remains the leading cause of death. This form of dissemination occurs in approximately 20% of cases at the time of diagnosis and can develop in up to 40% during follow-up. The presence of metastasis is associated with a significantly poorer prognosis and a high recurrence rate, highlighting the urgent need to better understand the molecular mechanisms driving metastatic progression.
 
-A nivel molecular, la metástasis implica una serie de cambios en la **expresión génica**, incluyendo vías relacionadas relacionadas con migración, adhesión y remodelación del microambiente tumoral. Sin embargo, los **biomarcadores moleculares** asociados a estos procesos no están completamente caracterizados, lo que limita el desarrollo de nuevas estategias terapéuticas.  
+At the molecular level, metastasis involves a series of changes in **gene expression**, including pathways related to migration, adhesion, and remodeling of the tumor microenvironment. However, the **molecular biomarkers** associated with these processes are not yet fully characterized, which limits the development of new therapeutic strategies.
 
-Estudiar los perfiles de expresión génica asociados con la invasión y migración celular es crucial para:
+Studying gene expression profiles associated with cellular invasion and migration is crucial to:
 
-* Identificar **biomarcadores** que permitan pronósticos más precisos.
-* Comprender los mecanismos moleculares de la metástasis.
+- Identify **biomarkers** that enable more accurate prognoses.
+- Understand the molecular mechanisms of metastasis.
 
-Este proyecto busca **replicar y validar** los hallazgos del artículo mediante un pipeline bioinformático de análisis de RNA-seq y análisis de expresión diferencial.
-
----
-
-## Calendario de trabajo
-
-| Actividad                                                                | Fecha          | Responsable    | Entregable                     |
-| ------------------------------------------------------------------------ | -------------- | -------------- | ------------------------------ |
-| Descripción del proyecto                                                 | 28 ago – 2 sep | Todo el equipo | Documento markdown             |
-| Descarga y control de calidad de datos                                   | 5 – 20 sep     | Andrea         | Reporte QC (FastQC)            |
-| Alineamiento y cuantificación de lecturas                                | 21 – 30 sep    | Antonio        | Archivos, tabla de conteos     |
-| Análisis de expresión diferencial (DESeq2)                               | 1 – 15 oct     | Alejandra      | Script, tablas de DEGs       |
-| Anotación funcional                                                      | 16 – 25 oct    | Alejandra      | Reporte en markdown            |
-| Integración de resultados y gráficas                                     | 26 oct – 5 nov | Antonio        | Figuras en repositorio         |
-| Redacción del reporte de resultados                                      | 6 – 15 nov     | Andrea         | Documento markdown             |
-| Presentación del proyecto                                                | Diciembre      | Todo el equipo | Repositorio GitHub (release)   |
+This project aims to **replicate and validate** the findings of the referenced article using a bioinformatics pipeline for RNA-seq analysis and differential expression analysis. Doing so will allow us to explore new hypotheses and generate more robust evidence for future clinical applications.
 
 ---
 
-## Metodología
+## Work Plan
 
-**Preguntas de investigación**
+| Activity                                                                 | Date             | Responsible     | Deliverable                   |
+| ------------------------------------------------------------------------ | ---------------- | --------------- | ----------------------------- |
+| Project description                                                      | Aug 28 – Sep 2   | Whole team      | Markdown document             |
+| Data download and quality control                                        | Sep 5 – Sep 20   | Andrea           | QC report (FastQC)            |
+| Read alignment and quantification                                        | Sep 21 – Sep 30  | Antonio          | Files, count table            |
+| Differential expression analysis (DESeq2)                                | Oct 1 – Oct 15   | Alejandra        | Script, DEG tables            |
+| Functional annotation                                                    | Oct 16 – Oct 25  | Alejandra        | Markdown report               |
+| Results integration and visualization                                    | Oct 26 – Nov 5   | Antonio          | Figures in repository         |
+| Writing of results report                                                | Nov 6 – Nov 15   | Andrea           | Markdown document             |
+| Project presentation                                                     | December         | Whole team      | GitHub repository (release)   |
 
-1. ¿Qué genes están diferencialmente expresados entre células osteoblásticas normales y líneas celulares de osteosarcoma metastásicas?
+---
 
-**Pipeline propuesto**
+## Methodology
 
-1. **Localización y descarga de datos** (ENA, proyectos PRJEB65286, PRJNA698672, PRJNA51801).
-2. **Control de calidad de lecturas FASTQ** (FastQC, Trim Galore).
-3. **Alineamiento**  (STAR).
-4. **Generación de tabla de conteos**
-5. **Análisis de expresión diferencial** (DESeq2)
-6. **Anotación funcional** 
-7. **Visualización de resultados**
-8. **Integración y discusión de resultados** 
+### Research Question
 
-## Resultados esperados
+1. Which genes are differentially expressed between normal osteoblastic cells and metastatic osteosarcoma cell lines?
 
-* Identificación de genes diferencialmente expresados entre células normales y osteosarcoma metastásico.
-* Detección de biomarcadores relevantes en la metástasis. 
-* Reproducción de resultados clave reportados en el artículo, con figuras. 
-* Generación de un repositorio reproducible en GitHub. 
+### Proposed Pipeline
 
+1. **Data retrieval and download** (ENA; projects PRJEB65286, PRJNA698672, PRJNA51801)  
+2. **FASTQ quality control** (FastQC, Trim Galore)  
+3. **Read alignment** (STAR)  
+4. **Count matrix generation**  
+5. **Differential expression analysis** (DESeq2)  
+6. **Functional annotation**  
+7. **Results visualization**  
+8. **Integration and discussion of results**  
+
+---
+
+## Expected Results
+
+- Identification of differentially expressed genes between normal cells and metastatic osteosarcoma.  
+- Detection of relevant biomarkers involved in metastasis.  
+- Reproduction of key results reported in the original article, including figures.  
+- Creation of a reproducible GitHub repository.
