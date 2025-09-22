@@ -97,6 +97,19 @@ python scripts/heatmap.py -e data/expression_matrix.csv -d data/deseq2_results.c
 python scripts/pathway_diagrams.py -d data/deseq2_results.csv -o figures
 ```
 
+### For Real Analysis Data
+
+When you have your own DESeq2 results, simply replace the sample data files:
+
+```bash
+# Replace sample data with your results
+cp your_deseq2_results.csv data/deseq2_results.csv
+cp your_expression_matrix.csv data/expression_matrix.csv
+
+# Run the complete visualization pipeline
+python scripts/integrate_results.py
+```
+
 ### Output Files
 
 The visualization scripts generate both PNG and PDF formats:
