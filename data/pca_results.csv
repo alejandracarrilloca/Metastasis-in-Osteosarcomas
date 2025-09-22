@@ -1,0 +1,10 @@
+sample_id,condition,PC1,PC2,PC3
+Normal_1,Normal,-12.34,5.67,-2.34
+Normal_2,Normal,-10.89,6.12,-1.89
+Normal_3,Normal,-11.45,5.34,-2.12
+Normal_4,Normal,-9.87,6.78,-1.67
+Metastatic_1,Metastatic,8.45,-4.23,3.45
+Metastatic_2,Metastatic,9.78,-3.89,3.12
+Metastatic_3,Metastatic,10.23,-4.56,2.89
+Metastatic_4,Metastatic,11.34,-3.67,3.23
+Metastatic_5,Metastatic,9.56,-4.12,3.56

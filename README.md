@@ -67,3 +67,44 @@ This project aims to **replicate and validate** the findings of the referenced a
 - Detection of relevant biomarkers involved in metastasis.  
 - Reproduction of key results reported in the original article, including figures.  
 - Creation of a reproducible GitHub repository.
+
+## Results Visualization
+
+This repository includes comprehensive visualization scripts to analyze and present the differential expression results:
+
+### Available Visualizations
+
+1. **Volcano Plot** - Shows differential expression significance vs fold change
+2. **PCA Plot** - Displays sample clustering and variance decomposition  
+3. **Expression Heatmaps** - Visualizes expression patterns of top differentially expressed genes
+4. **Pathway Diagrams** - Illustrates enriched biological pathways and metastasis processes
+
+### Quick Start
+
+To generate all visualizations:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Generate all plots using sample data
+python scripts/integrate_results.py
+
+# Or run individual scripts
+python scripts/volcano_plot.py -i data/deseq2_results.csv -o figures
+python scripts/pca_plot.py -i data/pca_results.csv -o figures  
+python scripts/heatmap.py -e data/expression_matrix.csv -d data/deseq2_results.csv -o figures
+python scripts/pathway_diagrams.py -d data/deseq2_results.csv -o figures
+```
+
+### Output Files
+
+The visualization scripts generate both PNG and PDF formats:
+- `volcano_plot.png/pdf` - Differential expression volcano plot
+- `pca_plot.png/pdf` - PCA analysis with variance explanation
+- `heatmap.png/pdf` - Expression heatmap of top DE genes
+- `clustered_heatmap.png/pdf` - Hierarchically clustered heatmap
+- `pathway_enrichment.png/pdf` - Pathway enrichment analysis
+- `metastasis_pathway_diagram.png/pdf` - Conceptual metastasis pathway
+
+All figures are saved to the `figures/` directory by default.
