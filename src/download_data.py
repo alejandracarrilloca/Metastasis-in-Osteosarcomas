@@ -125,6 +125,25 @@ def bioproject_summary(uid):
     return rec["DocumentSummarySet"]["DocumentSummary"][0]
 
 
+def linked_ids(uid, dbtarget):
+    """
+    Retrieve all linked IDs between a BioProject and another NCBI database.
+
+    Args:
+        uid (str): BioProject UID.
+        dbtarget (str): Target NCBI database (e.g., 'sra', 'gds', 'biosample', 'assembly').
+
+    Returns:
+        list: List of linked IDs.
+    """
+    handle = Entrez.elink(dbfrom="bioproject", db=dbtarget, id=uid)
+    links = Entrez.read(handle)
+    handle.close()
+    if not links or not links[0].get("LinkSetDb"):
+        return []
+    return [l["Id"] for l in links[0]["LinkSetDb"][0]["Link"]]
+
+
 def geo_summary(geo_uid):
     """
     Retrieve summary information from a GEO dataset linked to a BioProject.
@@ -156,25 +175,6 @@ def geo_summary(geo_uid):
     return geo_record
 
 
-def linked_ids(uid, dbtarget):
-    """
-    Retrieve all linked IDs between a BioProject and another NCBI database.
-
-    Args:
-        uid (str): BioProject UID.
-        dbtarget (str): Target NCBI database (e.g., 'sra', 'gds', 'biosample', 'assembly').
-
-    Returns:
-        list: List of linked IDs.
-    """
-    handle = Entrez.elink(dbfrom="bioproject", db=dbtarget, id=uid)
-    links = Entrez.read(handle)
-    handle.close()
-    if not links or not links[0].get("LinkSetDb"):
-        return []
-    return [l["Id"] for l in links[0]["LinkSetDb"][0]["Link"]]
-
-
 def sra_runinfo(sra_ids):
     """
     Retrieve the run information table for a list of SRA UIDs.
@@ -189,11 +189,14 @@ def sra_runinfo(sra_ids):
         handle = Entrez.efetch(db="sra", id=",".join(sra_ids), rettype="runinfo", retmode="text")
         data = handle.read()
         handle.close()
+
         if isinstance(data, bytes):
             data = data.decode()
+
         if not data.strip():
             return pd.DataFrame()
         return pd.read_csv(StringIO(data))
+    
     except Exception as e:
         print(f"Could not get info for {sra_ids}: {e}")
         return pd.DataFrame()
