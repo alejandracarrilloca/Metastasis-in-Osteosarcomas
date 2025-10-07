@@ -10,7 +10,7 @@ This analysis replicates the following article: [Biological Activity of Biomarke
 
 The data supporting the findings of this study are openly available in **ENA EMBL-EBI** ([https://www.ebi.ac.uk/ena/browser/home](https://www.ebi.ac.uk/ena/browser/home)) under the Project IDs: **PRJEB65286**, **PRJNA698672**, and **PRJNA51801**.
 
----
+-----
 
 ## Problem Statement
 
@@ -25,7 +25,7 @@ Studying gene expression profiles associated with cellular invasion and migratio
 
 This project aims to **replicate and validate** the findings of the referenced article using a bioinformatics pipeline for RNA-seq analysis and differential expression analysis. Doing so will allow us to explore new hypotheses and generate more robust evidence for future clinical applications.
 
----
+-----
 
 ## Work Plan
 
@@ -40,7 +40,7 @@ This project aims to **replicate and validate** the findings of the referenced a
 | Writing of results report                                                | Nov 6 – Nov 15   | Andrea           | Markdown document             |
 | Project presentation                                                     | December         | Whole team      | GitHub repository (release)   |
 
----
+-----
 
 ## Methodology
 
@@ -59,7 +59,7 @@ This project aims to **replicate and validate** the findings of the referenced a
 7. **Results visualization**  
 8. **Integration and discussion of results**  
 
----
+-----
 
 ## Expected Results
 
