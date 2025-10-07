@@ -134,11 +134,18 @@ def download_srr(srr_list, output_dir):
         ], check=True)
         print(f"Finished {srr}. Files saved in {srr_dir}")
 
+        # Validate FASTQ files
+        fastq_files = [f for f in os.listdir(srr_dir) if f.endswith(('.fastq', '.fastq.gz'))]
+        if not fastq_files:
+            print(f"{srr}: No FASTQ files found.")
+            continue
+        
+        #Validate files in directory
         for f in os.listdir(srr_dir):
             path = os.path.join(srr_dir, f)
             if os.path.getsize(path) == 0:
-                print(f"{f} is empty!")
-
+                print(f"{f} is empty")
+                
 def verify_ref_genome(organism = "Homo sapiens"):
     """
     Verify available reference genomes for Homo sapiens in NCBI Assembly.
