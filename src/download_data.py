@@ -131,7 +131,7 @@ def linked_ids(uid, dbtarget):
 
     Args:
         uid (str): BioProject UID.
-        dbtarget (str): Target NCBI database (e.g., 'sra', 'gds', 'biosample', 'assembly').
+        dbtarget (str): Target NCBI database (e.g., 'sra', 'biosample', 'assembly').
 
     Returns:
         list: List of linked IDs.
@@ -139,9 +139,9 @@ def linked_ids(uid, dbtarget):
     handle = Entrez.elink(dbfrom="bioproject", db=dbtarget, id=uid)
     links = Entrez.read(handle)
     handle.close()
-    if not links or not links[0].get("LinkSetDb"):
+    if not links or not links[0].get("LinkSetDb"): #Verify if empty
         return []
-    return [l["Id"] for l in links[0]["LinkSetDb"][0]["Link"]]
+    return [l["Id"] for l in links[0]["LinkSetDb"][0]["Link"]] #Extract from dicts into a list of Ids
 
 
 def geo_summary(geo_uid):
@@ -231,6 +231,7 @@ def sra_table(uid):
 
     df = pd.concat(df_list, ignore_index=True)
     return df.drop_duplicates(subset="Run")
+
 
 
 def download_srr(srr_list, output_dir):
@@ -439,4 +440,3 @@ if __name__ == "__main__":
             organism=args.organism,
             concat_script=args.concat_script
         )
-
