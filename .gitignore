@@ -1,0 +1,38 @@
+# Raw RNA-seq data files
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Downloaded SRA files
+*.sra
+
+# Intermediate run tables
+sra_run_table.csv
+
+# Reference genomes and annotations
+*.fna
+*.fna.gz
+*.fa
+*.fa.gz
+*.gff
+*.gff.gz
+*.gtf
+*.gtf.gz
+
+# Results folder (unique)
+results/
+
+# Temporary files
+*.tmp
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environments and dependencies
+_pycache_/
+*.pyc
+.env
+.venv/
