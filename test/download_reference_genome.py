@@ -4,6 +4,7 @@ import os
 from ftplib import FTP
 from urllib.parse import urlparse
 import urllib.request
+import gzip
 
 def verify_ref_genome(organism="Homo sapiens"):
     """
@@ -54,7 +55,6 @@ def verify_ref_genome(organism="Homo sapiens"):
     print(df_filtered[["Organism", "AssemblyName", "RefSeq_category", "AssemblyAccession"]].head(5))
 
     return df_filtered
-
 
 def download_ref_genome(df_filtered, output_dir):
     """

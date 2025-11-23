@@ -1,0 +1,21 @@
+# Raw data and results (entire folders)
+data/
+results/
+
+# Temporary files
+*.tmp
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environments and dependencies
+_pycache_/
+*.pyc
+.env
+.venv/
+
+# Visual Studio Code settings
+.vscode/
+*.code-workspace
