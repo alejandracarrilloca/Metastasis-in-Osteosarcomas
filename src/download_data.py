@@ -48,7 +48,17 @@ def bioproject_uid(accession):
         return None
     return res["IdList"][0]
 
-def bioproject_summary(uid):
+def bioproject_summary(u
+def bioproject_uid(accession):
+    """Get internal UID of a BioProject"""
+    handle = Entrez.esearch(database="bioproject", term=accession)
+    res = Entrez.read(handle)
+    handle.close()
+    if not res["IdList"]:
+        print(f"No BioProject found for {accession}")
+        return None
+    return res["IdList"][0]
+id):
     """Retrieve BioProject metadata"""
     handle = Entrez.esummary(database="bioproject", id=uid)
     rec = Entrez.read(handle)
