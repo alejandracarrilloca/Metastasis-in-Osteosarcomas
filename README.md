@@ -48,6 +48,17 @@ This project aims to **replicate and validate** the findings of the referenced a
 
 1. Which genes are differentially expressed between normal osteoblastic cells and metastatic osteosarcoma cell lines?
 
+The conditions of the samples are the following, OS means Osteosarcoma and CTL means control:
+
+| **Run Accession** | **Sample Accession** | **Sample Title** |
+|:-----------------:|:--------------------:|:----------------:|
+| `ERR13451008` | `SAMEA114285858` | OS |
+| `ERR13448321` | `SAMEA114285854` | CTL |
+| `ERR13451021` | `SAMEA114285857` | OS |
+| `ERR13448329` | `SAMEA114285856` | OS |
+| `ERR13451054` | `SAMEA114285859` | OS |
+| `ERR13447502` | `SAMEA114285855` | CTL |
+
 ### Proposed Pipeline
 
 1. **Data retrieval and download** (ENA; projects PRJEB65286, PRJNA698672, PRJNA51801)  
