@@ -3,8 +3,6 @@
 **08/26/2025**
 
 - Dulce Alejandra Carrillo Carlos [carrillo@lcg.unam.mx](mailto:carrillo@lcg.unam.mx)  
-- Addiel Antonio Platas Renteral [addielpr@lcg.unam.mx](mailto:addielpr@lcg.unam.mx)  
-- Andrea Villarruel García [andreavg@lcg.unam.mx](mailto:andreavg@lcg.unam.mx)
 
 This analysis replicates the following article: [Biological Activity of Biomarkers Associated With Metastasis in Osteosarcoma Cell Lines](https://doi.org/10.1002/cam4.70391).
 
